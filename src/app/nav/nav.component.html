@@ -2,14 +2,14 @@
   <h5 class="my-0 mr-md-auto font-weight-normal navbar-brand">Company name</h5>
   <nav class="my-2 my-md-0 mr-md-3">
     <a class="p-2 text-dark" routerLink="/">Home</a>
-    <small><span *ngIf="fAuth.user | async">Welcome {{ user }}</span></small>
+    <small><span *ngIf="user | async">Welcome {{ (user | async)?.email }}</span></small>
 
   </nav>
-  <div *ngIf="!user">
+  <div *ngIf="!(user | async)">
     <a class="btn btn-outline-primary" routerLink="/login">Login</a>
     <a class="btn btn-outline-primary" routerLink="/register">Sign up</a>
   </div>
-  <div *ngIf="user">
+  <div *ngIf="user | async">
     <button class="btn btn-outline-secondary" (click)="signOut()">Sign Out</button>
   </div>
 </div>

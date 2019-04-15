@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { LoggedInComponent } from './logged-in/logged-in.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +20,6 @@ import { LoggedInComponent } from './logged-in/logged-in.component';
     RegisterComponent,
     NavComponent,
     HomeComponent,
-    LoggedInComponent
   ],
   imports: [
     BrowserModule,
