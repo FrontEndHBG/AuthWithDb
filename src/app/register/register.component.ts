@@ -21,7 +21,7 @@ export class RegisterComponent implements OnInit {
   register() {
     this.fAuth.auth.createUserWithEmailAndPassword(this.email, this.password)
     .then(value => {
-      this.router.navigate(['/']);
+      this.router.navigate(['/todo']);
     })
     .catch(err => {
       this.invalidForm = true;

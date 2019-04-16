@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   login() {
     this.fAuth.auth.signInWithEmailAndPassword(this.email, this.password)
     .then(value => {
-      this.router.navigate(['/']);
+      this.router.navigate(['/todo']);
 
     })
     .catch(err => {
